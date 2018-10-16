@@ -4,10 +4,12 @@
   "description": "learning how to test JS, calculate ski-jumpers notes",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./src/**/*.test.js"
+    "test": "mocha ./src/**/*.test.js",
+    "test:watch": "mocha ./src/**/*.test.js"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
     "mocha": "^5.2.0"
   }
