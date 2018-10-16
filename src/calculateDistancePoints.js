@@ -5,17 +5,21 @@ class hillParams {
     }
 }
 const hillPoints = {
-    N: new hillParams(60, 2),
+    Nor: new hillParams(60, 2),
     L: new hillParams(60, 1.8),
     XL: new hillParams(120, 1.2)
     
 }
-    const calculateDistancePoints = (distance, hillSize, kPoint) => {
+    const calculateDistancePoints = (hillSize, distance, kPoint) => {
+        if (hillPoints[hillSize]){
+
         const roundedDistance = Math.round(distance * 2) / 2;
 
-        const { basicPoints, hillMultiplier } = hillParameters[hillSize];
+        const { basicPoints, hillMultiplier } = hillPoints[hillSize];
 
-        return basicPoints + (roundedDistance - kPoint) * hillMultiplier;
-  };
+        return ((basicPoints + (roundedDistance - kPoint) * hillMultiplier) * 100 )/100;
   
-  module.exports = calculateDistancePoints;
+    }
+};
+
+module.exports = calculateDistancePoints;
