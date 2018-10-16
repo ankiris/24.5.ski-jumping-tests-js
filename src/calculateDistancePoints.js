@@ -17,7 +17,7 @@ const hillPoints = {
 
         const { basicPoints, hillMultiplier } = hillPoints[hillSize];
 
-        return ((basicPoints + (roundedDistance - kPoint) * hillMultiplier) * 100 )/100;
+        return ((basicPoints + (roundedDistance - kPoint) * hillMultiplier)*100/100);
   
     }
 };
